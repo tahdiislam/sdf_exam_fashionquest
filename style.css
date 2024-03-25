@@ -1,0 +1,25 @@
+/** @format */
+
+.nav_cus {
+  background-color: #1a187a;
+}
+
+.banner {
+  background-image: url("./images/banner_background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.phone_title {
+  font-size: 6rem;
+}
+
+.show_now_btn {
+  background-color: #1a187a;
+}
+
+.category_cart {
+  height: 9rem;
+  width: 11rem;
+}
