@@ -5,7 +5,8 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Bootstrap demo</title>
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon" />
+    <title>Shop Hero</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -30,7 +31,7 @@
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <i class="fa-solid fa-bars text-white"></i>
+          <i class="fa-solid fa-bars-staggered text-white"></i>
         </button>
         <div
           class="navbar-collapse collapse d-lg-flex justify-content-between align-items-center"
@@ -80,14 +81,13 @@
       </div>
     </nav>
     <!-- banner -->
-
-    <div id="carouselExample" class="carousel slide">
+    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner banner">
-        <div class="carousel-item active">
+        <div class="carousel-item" data-bs-interval="5000">
           <div
             class="d-flex flex-column flex-lg-row justify-content-center align-items-center mt-5 gap-5"
           >
-            <div class="text-start">
+            <div class="text-start px-4 px-lg-0">
               <h5 class="fw-normal text-body-secondary">Pro.Beyond.</h5>
               <h1 class="phone_title fw-normal">
                 IPhone <span class="fw-bolder">14 Pro</span>
@@ -105,11 +105,11 @@
             <img src="./images/Iphone Image.png" alt="" />
           </div>
         </div>
-        <div class="carousel-item active">
+        <div class="carousel-item active" data-bs-interval="5000">
           <div
             class="d-flex flex-column flex-lg-row justify-content-center align-items-center mt-5 gap-5"
           >
-            <div class="text-start">
+            <div class="text-start px-4 px-lg-0">
               <h5 class="fw-normal text-body-secondary">Pro.Beyond.</h5>
               <h1 class="phone_title fw-normal">
                 IPhone <span class="fw-bolder">15 Pro</span>
@@ -134,7 +134,10 @@
         data-bs-target="#carouselExample"
         data-bs-slide="prev"
       >
-        <i class="fa-solid fa-chevron-left text-black fs-5"></i>
+        <i
+          class="fa-solid fa-chevron-left text-black fs-5"
+          aria-hidden="true"
+        ></i>
         <span class="visually-hidden">Previous</span>
       </button>
       <button
@@ -143,15 +146,86 @@
         data-bs-target="#carouselExample"
         data-bs-slide="next"
       >
-        <i class="fa-solid fa-chevron-right text-black fs-5"></i>
+        <i
+          class="fa-solid fa-chevron-right text-black fs-5"
+          aria-hidden="true"
+        ></i>
         <span class="visually-hidden">Next</span>
       </button>
     </div>
-
+    <!-- features section -->
+    <div class="d-flex flex-column flex-lg-row justify-content-center">
+      <div class="">
+        <div class="d-flex justify-content-between align-items-center">
+          <img class="d-none d-lg-block" src="./images/ipade.png" alt="" />
+          <img class="d-lg-none" src="./images/ipade_crop.png" alt="" />
+          <div
+            class="d-flex flex-column justify-content-start align-items-start pe-5"
+          >
+            <h2 class="fs-1">iPad 9</h2>
+            <p class="text-secondary fs-6">
+              New iPad. More colorful. More capable. All-screen design with a
+              stunning 10.9-inch Liquid Retina display. Powerful and versatile
+              for work, creativity, and fun.
+            </p>
+          </div>
+        </div>
+        <div
+          class="d-flex justify-content-between align-items-center fetures_2nd"
+        >
+          <img
+            class="d-none d-lg-block"
+            src="./images/headset_cus.png"
+            alt=""
+          />
+          <img class="d-lg-none" src="./images/headset_cus_2.png" alt="" />
+          <div
+            class="d-flex flex-column justify-content-start align-items-start px-4"
+          >
+            <h2 class="fs-2 fw-light">
+              Apple AirPods <span class="fw-medium">Max</span>
+            </h2>
+            <p class="text-secondary fs-6">
+              AirPods Max: Immerse yourself in high-fidelity audio with the
+              magic of AirPods.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="d-flex flex-column flex-lg-row justify-content-between align-items-center bg-body-secondary"
+      >
+        <div
+          class="d-flex flex-column justify-content-start align-items-start ps-5 py-5 py-lg-0"
+        >
+          <h2 class="fw-light features_3rd_title">
+            Mackbook <span class="fw-medium">Air</span>
+          </h2>
+          <p class="text-secondary fs-6">
+            M3-powered MacBook Air. Blazes through work and play. All-day
+            battery life. Unmatched portability.
+          </p>
+          <button
+            type="button"
+            class="btn btn-primary fs-5 fw-medium nded-1 px-4 py-2 text-white shop_now_button"
+          >
+            Shop Now
+          </button>
+        </div>
+        <img
+          class="d-none d-lg-block"
+          src="./images/MacBook Pro 14.png"
+          alt=""
+        />
+        <img class="d-lg-none" src="./images/Group 6.png" alt="" height="250" />
+      </div>
+    </div>
     <!-- browse product -->
     <div class="container py-5">
       <h3 class="h3 pb-4">Browse By Category</h3>
-      <div class="row justify-content-between">
+      <div
+        class="row justify-content-around gap-4 gap-lg-0 justify-content-lg-between text-center"
+      >
         <div
           class="d-flex flex-column align-items-center justify-content-center bg-body-secondary rounded-4 category_cart col-6 col-lg-2"
         >
@@ -194,16 +268,136 @@
     <!-- product -->
     <div class="container pb-5">
       <div
-        class="fs-4 fw-light text-secondary d-flex justify-content-start gap-5"
+        class="fs-4 fw-light text-secondary d-flex justify-content-start gap-5 pb-4"
       >
-        <a class="link-underline-dark" href="/"><h4 class="fw-bold text-black">New Arrival</h4></a>
+        <a class="link-underline-dark" href="/"
+          ><h4 class="fw-bold text-black">New Arrival</h4></a
+        >
         <h4>Bestseller</h4>
         <h4>Featured Products</h4>
       </div>
-      <div >
-        
+      <div
+        class="row justify-content-center justify-content-lg-between gap-5 gap-lg-4 gap-xl-0"
+      >
+        <div
+          class="d-flex flex-column justify-content-center align-items-center bg-body-secondary col-6 col-lg-2 rounded-3 product_card pt-5 position-relative"
+        >
+          <i
+            class="fa-regular fa-heart fs-3 position-absolute heart_icon text-secondary"
+          ></i>
+          <img src="./images/Iphone 14 pro 1-2.png" alt="" height="170" />
+          <p class="fs-6 fw-medium text-center">
+            Apple iPhone 14 Pro Max 128GB Deep Purple (MQ9T3RX/A)
+          </p>
+          <h3 class="fs-3 fw-bold">$900</h3>
+          <button class="fs-5 bg-black py-2 px-4 rounded-3 text-white w-75">
+            Buy Now
+          </button>
+        </div>
+        <div
+          class="d-flex flex-column justify-content-center align-items-center bg-body-secondary col-6 col-lg-2 rounded-3 product_card pt-5 position-relative"
+        >
+          <i
+            class="fa-regular fa-heart fs-3 position-absolute heart_icon text-secondary"
+          ></i>
+          <img src="./images/Iphone 14 pro 1-3.png" alt="" height="170" />
+          <p class="fs-6 fw-medium text-center">
+            Blackmagic Pocket Cinema Camera 6k
+          </p>
+          <h3 class="fs-3 fw-bold">$2535</h3>
+          <button class="fs-5 bg-black py-2 px-4 rounded-3 text-white w-75">
+            Buy Now
+          </button>
+        </div>
+        <div
+          class="d-flex flex-column justify-content-center align-items-center bg-body-secondary col-6 col-lg-2 rounded-3 product_card pt-5 position-relative"
+        >
+          <i
+            class="fa-solid fa-heart fs-3 position-absolute heart_icon text-danger"
+          ></i>
+          <img src="./images/Iphone 14 pro 1-1.png" alt="" height="170" />
+          <p class="fs-6 fw-medium text-center">
+            Apple Watch Series 9 GPS 41mm Starlight Aluminium Case
+          </p>
+          <h3 class="fs-3 fw-bold">$399</h3>
+          <button class="fs-5 bg-black py-2 px-4 rounded-3 text-white w-75">
+            Buy Now
+          </button>
+        </div>
+        <div
+          class="d-flex flex-column justify-content-center align-items-center bg-body-secondary col-6 col-lg-2 rounded-3 product_card pt-5 position-relative"
+        >
+          <i
+            class="fa-regular fa-heart fs-3 position-absolute heart_icon text-secondary"
+          ></i>
+          <img src="./images/Iphone 14 pro 1.png" alt="" height="170" />
+          <p class="fs-6 fw-medium text-center">AirPods Max Silver</p>
+          <h3 class="fs-3 fw-bold">$549</h3>
+          <button class="fs-5 bg-black py-2 px-4 rounded-3 text-white w-75">
+            Buy Now
+          </button>
+        </div>
       </div>
     </div>
+
+    <!-- bottom banner -->
+    <div
+      class="d-flex flex-column flex-lg-row justify-content-between align-items-center bottom_banner py-5"
+    >
+      <img
+        class="align-self-start"
+        src="./images/botton_banner_02.png"
+        alt=""
+      />
+      <div>
+        <h1 class="fw-bold bottom_banner_head text-white text-center">
+          <span class="bottom_banner_text">11.11</span> Sale
+        </h1>
+        <p class="text-white text-center w-50 me-auto ms-auto">
+          Save big on Apple! Don't miss 11.11 mega discounts. iPhones, iPads,
+          Macs & more!
+        </p>
+      </div>
+      <img class="align-self-end" src="./images/botton_banner_01.png" alt="" />
+    </div>
+    <!-- footer -->
+    <footer
+      class="d-flex flex-column flex-lg-row justify-content-evenly align-items-center align-items-lg-start footer_cus py-5 gap-4 gap-lg-4 text-center text-lg-start"
+    >
+      <img src="./images/Group 2.png" alt="" height="30" />
+      <div
+        class="d-lg-flex align-items-center gap-5 justify-content-center fs-3 d-none"
+      >
+        <i class="fa-brands fa-x-twitter"></i>
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-instagram"></i>
+      </div>
+      <ul class="list-unstyled fs-5">
+        <li>Services</li>
+        <li>Bonus program</li>
+        <li>Gift card</li>
+        <li>Credit and payment</li>
+        <li>Service contact</li>
+        <li>Non-cash account</li>
+        <li>Payment</li>
+      </ul>
+      <ul class="list-unstyled fs-5">
+        <li>Assistance to the Buyer</li>
+        <li>Find an order</li>
+        <li>Terms of delivery</li>
+        <li>Exchange and return of goods</li>
+        <li>Guarantee</li>
+        <li>Frequently asked question</li>
+        <li>Terms of use of the site</li>
+      </ul>
+      <div
+        class="d-flex align-items-center gap-5 justify-content-center fs-3 d-lg-none"
+      >
+        <i class="fa-brands fa-x-twitter"></i>
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-instagram"></i>
+      </div>
+    </footer>
 
     <!--cdn script of bootstrap -->
     <script

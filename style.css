@@ -1,5 +1,14 @@
 /** @format */
 
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
 .nav_cus {
   background-color: #1a187a;
 }
@@ -12,7 +21,13 @@
 }
 
 .phone_title {
-  font-size: 6rem;
+  font-size: 3rem;
+}
+
+@media (min-width: 992px) {
+  .phone_title {
+    font-size: 5rem;
+  }
 }
 
 .show_now_btn {
@@ -22,4 +37,43 @@
 .category_cart {
   height: 9rem;
   width: 11rem;
+}
+
+.product_card {
+  width: 17rem;
+  padding: 2rem 0;
+}
+
+.heart_icon {
+  top: 1rem;
+  right: 1rem;
+}
+
+.bottom_banner {
+  background-color: #958ad4;
+}
+
+.bottom_banner_head {
+  font-size: 5rem;
+}
+
+.bottom_banner_text {
+  color: #25177b;
+}
+
+.footer_cus {
+  background-color: #0e071b;
+  color: rgb(171, 171, 171);
+}
+
+.fetures_2nd {
+  background-color: #adc2d7;
+}
+
+.features_3rd_title {
+  font-size: 4rem;
+}
+
+.shop_now_button {
+  background-color: #27448e;
 }
